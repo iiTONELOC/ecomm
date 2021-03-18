@@ -37,7 +37,7 @@ If you wish to test the API Navigate to the root of the directory and type: ```n
 This will launch the MySQL CLI.  
 Enter your password. Type: ```CREATE DATABASE ecommerce_db;``` followed by ```QUIT```.  
 This will create the database, seed it with test data, and launch the server.  
-If you wish to initialize the database with out test data type: ```npm run init```  
+If you wish to initialize the database without test data type: ```npm run init```  
 This will launch the MySQL CLI, follow the on screen instructions. When the MySQL CLI is closed the tables will be created and the server will be launched. 
 
 # Usage
