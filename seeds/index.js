@@ -2,7 +2,6 @@ const seedCategories = require('./category-seeds');
 const seedProducts = require('./product-seeds');
 const seedTags = require('./tag-seeds');
 const seedProductTags = require('./product-tag-seeds');
-
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
@@ -23,7 +22,7 @@ const seedAll = async () => {
   process.exit(0);
 };
 initializeDatabase=()=>{
-
+  console.log('\n Enter your MySQL Password.\n Type: CREATE DATABASE ecommerce_db;\n Then Type: QUIT');
   const { spawn } = require('child_process');
   const child = spawn('mysql -u root -p', { shell: true, detached: true });
 
