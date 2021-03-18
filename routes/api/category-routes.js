@@ -8,9 +8,7 @@ router.get('/', (req, res) => {
   // be sure to include its associated Products
   Category.findAll({
     include: [
-      {
-        model: Product
-      },
+      { model: Product },
     ]
   })
     .then(catData => {
@@ -65,24 +63,24 @@ router.put('/:id', (req, res) => {
   // update a category by its `id` value
   Category.update(
     {
-        category_name: req.body.category_name
+      category_name: req.body.category_name
     },
     {
-        where: {
-            id: req.params.id
-        }
+      where: {
+        id: req.params.id
+      }
     }
-)
+  )
     .then(updateData => {
-        if (!updateData) {
-            res.status(404).json({ message: 'No post found with this id' });
-            return;
-        }
-        res.json(updateData);
+      if (!updateData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      res.json(updateData);
     })
     .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 
@@ -90,19 +88,19 @@ router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
     where: {
-        id: req.params.id
+      id: req.params.id
     }
-})
+  })
     .then(deleteData => {
-        if (!deleteData) {
-            res.status(404).json({ message: 'No post found with this id' });
-            return;
-        }
-        res.json(deleteData);
+      if (!deleteData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      res.json(deleteData);
     })
     .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 
