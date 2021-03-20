@@ -33,6 +33,7 @@ ECOMMERCE BACK END is a RESTful API for a ECOMMERCE database.
 # Installation  
 Project Repository: [ECOMMERCE BACK END](https://github.com/iiTONELOC/ecomm)  
 Clone the repo, link is above.  Navigate to the root of the directory and type: ```npm install```  
+From the root type ```code .``` navigate to the .env file and replace the user name and password with your MySQL login information.   
 If you wish to test the API Navigate to the root of the directory and type: ```npm run seed```  
 This will launch the MySQL CLI.  
 Enter your password. Type: ```CREATE DATABASE ecommerce_db;``` followed by ```QUIT```.  
